@@ -36,7 +36,7 @@
             area.innerHTML = null;
             const list = getCardlist();
             list.forEach(line => {
-                let cnt = line.substring(0, 1);
+                let cnt = line.match(/^[0-9]+/);
                 let [set, num] = line.split(' ').slice(-2).map(v => v.replace(/\(|\)/g, ''));
                 print(area, cnt, set, num);
             });
